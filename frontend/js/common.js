@@ -1,4 +1,4 @@
-const API_BASE_URL = 'https://abdulloh-service.robohouse.tech/api';
+const API_BASE_URL = 'http://127.0.0.1:8001/api';
 
 
 async function apiRequest(endpoint, options = {}) {
@@ -92,22 +92,43 @@ function getStatusColor(status) {
 function renderSidebar(role, activePage) {
     const sidebarContent = document.getElementById('sidebarContent');
     const links = {
-        user: [
-            { href: 'dashboard.html', icon: 'fa-tachometer-alt', text: 'Boshqaruv Paneli' },
-            { href: 'create-request.html', icon: 'fa-plus-circle', text: 'So‘rov Yaratish' },
-            { href: 'profile.html', icon: 'fa-user', text: 'Profil' }
-        ],
-        manager: [
-            { href: 'dashboard.html', icon: 'fa-tachometer-alt', text: 'Boshqaruv Paneli' },
-            { href: 'staff.html', icon: 'fa-users', text: 'Xodimlar' },
-            { href: 'components.html', icon: 'fa-cogs', text: 'Komponentlar' },
-            { href: 'profile.html', icon: 'fa-user', text: 'Profil' }
-        ],
-        master: [
-            { href: 'dashboard.html', icon: 'fa-tachometer-alt', text: 'Boshqaruv Paneli' },
-            { href: 'components.html', icon: 'fa-cogs', text: 'Komponentlar' },
-            { href: 'profile.html', icon: 'fa-user', text: 'Profil' }
-        ]
+      user: [
+        {
+          href: "dashboard.html",
+          icon: "fa-tachometer-alt",
+          text: "Boshqaruv Paneli",
+        },
+        {
+          href: "create-request.html",
+          icon: "fa-plus-circle",
+          text: "So‘rov Yaratish",
+        },
+        { href: "profile.html", icon: "fa-user", text: "Profil" },
+      ],
+      manager: [
+        {
+          href: "dashboard.html",
+          icon: "fa-tachometer-alt",
+          text: "Boshqaruv Paneli",
+        },
+        { href: "staff.html", icon: "fa-users", text: "Xodimlar" },
+        {
+          href: "create-request.html",
+          icon: "fa-plus-circle",
+          text: "So‘rov Yaratish",
+        },
+        { href: "components.html", icon: "fa-cogs", text: "Komponentlar" },
+        { href: "profile.html", icon: "fa-user", text: "Profil" },
+      ],
+      master: [
+        {
+          href: "dashboard.html",
+          icon: "fa-tachometer-alt",
+          text: "Boshqaruv Paneli",
+        },
+        { href: "components.html", icon: "fa-cogs", text: "Komponentlar" },
+        { href: "profile.html", icon: "fa-user", text: "Profil" },
+      ],
     };
 
     console.log(links[role][0].href.split('.')[0]);
