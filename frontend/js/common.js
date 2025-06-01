@@ -112,11 +112,7 @@ function renderSidebar(role, activePage) {
           text: "Boshqaruv Paneli",
         },
         { href: "staff.html", icon: "fa-users", text: "Xodimlar" },
-        {
-          href: "create-request.html",
-          icon: "fa-plus-circle",
-          text: "So‘rov Yaratish",
-        },
+      
         { href: "components.html", icon: "fa-cogs", text: "Komponentlar" },
         { href: "profile.html", icon: "fa-user", text: "Profil" },
       ],
